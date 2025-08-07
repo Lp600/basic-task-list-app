@@ -45,22 +45,21 @@ button:hover {
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
 }
 
 li {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin: 5px;
 }
 
-li:last-child {
-  border-bottom: none;
-}
 
 .delete-btn {
   color: #dc3545;
