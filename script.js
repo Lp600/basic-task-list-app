@@ -48,3 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial render
   rendertasks();
 });
+if (Notification.permission === 'granted') {
+  new Notification('Timedown Complete!', {
+    body: 'Your countdown has finished.',
+    icon: 'icon.png'
+  });
+} else if (Notification.permission !== 'denied') {
+  Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+      new Notification('Timedown Complete!', { body: 'Finished!' });
+    }
+  });
+} 
+
